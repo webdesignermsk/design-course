@@ -1,0 +1,51 @@
+@use '../base/base-lib.scss' as *;
+
+.sidebar_wrapper,
+.sidebar {
+  height: 101%;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+
+  transform: translateX(100%);
+}
+
+.sidebar_wrapper {
+  width: 100%;
+  background-color: rgba($gray, 70%);
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 240px;
+  padding: 0 20px;
+
+  background-color: $gray;
+  box-shadow: -3px 0px 6px rgba($primary, 15%);
+  overflow: scroll;
+
+  @include breakpoint($extra-sm-bp) {
+    width: 340px;
+  }
+
+  @include breakpoint($m-bp) {
+    width: 440px;
+  }
+
+  @include breakpoint($lg-bp) {
+    display: none;
+  }
+}
+
+.sidebar_btn {
+  margin: 40px 10px;
+
+  @include breakpoint($extra-sm-bp) {
+    margin: 40px 20px;
+  }
+}

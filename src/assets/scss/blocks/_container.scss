@@ -1,0 +1,22 @@
+@use '../base/base-lib.scss' as *;
+
+.container {
+  margin: 0 auto;
+  width: 280px;
+
+  @include breakpoint($extra-sm-bp) {
+    width: 410px;
+  }
+
+  @include breakpoint($m-bp) {
+    width: 540px;
+  }
+
+  @include breakpoint($lg-bp) {
+    width: 960px;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    width: 1140px;
+  }
+}

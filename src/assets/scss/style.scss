@@ -1,0 +1,40 @@
+@use 'base/vars.scss' as *;
+@use 'base/fonts.scss';
+@use 'vendor/locomotive-scroll.css';
+@use 'blocks/transition.scss';
+@use 'blocks/header.scss';
+@use 'blocks/container.scss';
+@use 'blocks/sidebar.scss';
+@use 'blocks/nav.scss';
+@use 'blocks/logo.scss';
+@use 'blocks/progress-ring.scss';
+@use 'blocks/intro.scss';
+@use 'blocks/title.scss';
+@use 'blocks/btn.scss';
+@use 'blocks/about.scss';
+@use 'blocks/cards.scss';
+@use 'blocks/card.scss';
+@use 'blocks/work.scss';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url('../images/bg-pattern.png') center center fixed;
+
+  color: $primary;
+  font: {
+    size: 16px;
+    weight: 400;
+    family: 'Poppins', sans-serif;
+  }
+
+  &.show-nav {
+    overflow: hidden;
+  }
+}

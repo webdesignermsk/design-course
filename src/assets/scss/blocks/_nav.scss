@@ -1,0 +1,35 @@
+@use '../base/base-lib.scss' as *;
+@use '../base/placeholds.scss';
+
+.nav {
+  margin-top: 120px;
+
+  @include breakpoint($m-bp) {
+    margin-top: 180px;
+  }
+}
+
+.nav_list {
+  margin: 0 20px;
+  list-style: none;
+}
+
+.nav_link {
+  font-size: 17px;
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    @extend %link;
+  }
+
+  @include breakpoint($m-bp) {
+    font-size: 20px;
+  }
+}

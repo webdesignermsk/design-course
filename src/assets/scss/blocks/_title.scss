@@ -1,0 +1,128 @@
+@use '../base/base-lib.scss' as *;
+
+.title {
+  font: {
+    size: 37px;
+    weight: 700;
+  }
+
+  span {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+  }
+
+  .char {
+    display: inline-block;
+  }
+
+  &-sm {
+    font-size: 25px;
+  }
+
+  &-line-up {
+    img {
+      bottom: -6px;
+    }
+  }
+
+  @include breakpoint($extra-sm-bp) {
+    font-size: 50px;
+
+    img {
+      width: 140px;
+      bottom: 4px;
+    }
+
+    &-sm {
+      font-size: 40px;
+    }
+
+    &-line-up {
+      img {
+        bottom: -6px;
+      }
+    }
+  }
+
+  @include breakpoint($m-bp) {
+    font-size: 67px;
+
+    img {
+      width: 185px;
+      bottom: 6px;
+    }
+
+    &-sm {
+      font-size: 55px;
+    }
+
+    &-line-up {
+      img {
+        bottom: -10px;
+      }
+    }
+  }
+
+  @include breakpoint($lg-bp) {
+    font-size: 50px;
+
+    img {
+      width: 140px;
+      bottom: 4px;
+    }
+
+    &-sm {
+      font-size: 55px;
+    }
+
+    &-line-up {
+      img {
+        bottom: -8px;
+      }
+    }
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    font-size: 60px;
+
+    img {
+      width: 170px;
+      bottom: 4px;
+      clip-path: inset(0 100% 0 0);
+    }
+
+    &-line-up {
+      img {
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+.sub-title {
+  color: $text-gray;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+
+  @include breakpoint($extra-sm-bp) {
+    font-size: 17px;
+  }
+
+  @include breakpoint($m-bp) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($lg-bp) {
+    font-size: 17px;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    font-size: 20px;
+  }
+}

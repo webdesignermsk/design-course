@@ -1,0 +1,22 @@
+@use '../base/base-lib.scss' as *;
+@use '../base/placeholds.scss';
+
+.logo {
+  display: inline-block;
+
+  color: $accent;
+  font: {
+    weight: 700;
+    size: 20px;
+  }
+
+  @extend %link;
+
+  @include breakpoint($m-bp) {
+    font-size: 22px;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    font-size: 25px;
+  }
+}

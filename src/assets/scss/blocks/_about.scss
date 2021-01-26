@@ -1,0 +1,91 @@
+@use '../base/base-lib.scss' as *;
+@use '../base/placeholds.scss';
+
+.about {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 180px;
+  background-color: $gray;
+
+  @include breakpoint($m-bp) {
+    margin-top: 260px;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-top: 150px;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    flex-direction: unset;
+    margin-top: 240px;
+  }
+}
+
+.about_part {
+  width: 100%;
+}
+
+.about_descr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  padding: 80px 0;
+
+  background-color: $accent;
+
+  position: relative;
+
+  p {
+    width: 280px;
+    opacity: 0;
+    color: $white;
+  }
+
+  @include breakpoint($extra-sm-bp) {
+    p {
+      width: 410px;
+    }
+  }
+
+  @include breakpoint($m-bp) {
+    p {
+      width: 540px;
+    }
+  }
+}
+
+.about_img {
+  width: 120px;
+  height: 120px;
+
+  position: absolute;
+  top: -60px;
+  left: -20px;
+
+  img {
+    transform: scale(0);
+
+    @extend %img;
+  }
+
+  @include breakpoint($m-bp) {
+    width: 145px;
+    height: 145px;
+    top: -70px;
+    left: -30px;
+  }
+
+  @include breakpoint($lg-bp) {
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -40px;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    left: -80px;
+  }
+}

@@ -1,0 +1,95 @@
+@use '../base/base-lib.scss' as *;
+
+.intro {
+  margin-top: 140px;
+
+  @include breakpoint($m-bp) {
+    margin-top: 200px;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-top: 230px;
+  }
+}
+
+.intro_inner {
+  position: relative;
+
+  @include breakpoint($lg-bp) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.intro_title {
+  margin-top: 20px;
+  line-height: 120%;
+
+  .word {
+    display: inline-block;
+    margin-top: -10px;
+    overflow: hidden;
+  }
+}
+
+.intro_img {
+  width: 100%;
+  margin-top: 60px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include breakpoint($m-bp) {
+    margin-top: 100px;
+  }
+
+  @include breakpoint($lg-bp) {
+    width: 500px;
+    margin-top: 0;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    width: 580px;
+  }
+}
+
+.intro_btn {
+  margin-top: 60px;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+
+  @include breakpoint($m-bp) {
+    bottom: -160px;
+  }
+
+  @include breakpoint($lg-bp) {
+    margin-top: 40px;
+    position: static;
+  }
+}
+
+.intro_text {
+  margin-top: 40px;
+
+  @include breakpoint($lg-bp) {
+    display: flex;
+    align-items: center;
+
+    margin-top: 0;
+    padding-left: 100px;
+    max-width: 600px;
+    height: 150px;
+
+    border-left: 1px solid $border-gray;
+  }
+
+  @include breakpoint($extra-lg-bp) {
+    padding-left: 130px;
+    max-width: 700px;
+    height: 170px;
+  }
+}

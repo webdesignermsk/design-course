@@ -1,0 +1,22 @@
+@use '../base/base-lib.scss' as *;
+
+.progress-ring {
+  stroke: $accent;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  transform: translate(-50%, -50%);
+
+  @include breakpoint($m-bp) {
+    top: 7.4%;
+    left: 7.4%;
+    transform: scale(1.4);
+  }
+}
+
+.progress-ring_circle {
+  transition: stroke-dashoffset 0.3s;
+}

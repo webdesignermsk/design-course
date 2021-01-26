@@ -1,0 +1,23 @@
+@use '../base/vars.scss' as *;
+
+.transition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: $accent;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.transition_title {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}

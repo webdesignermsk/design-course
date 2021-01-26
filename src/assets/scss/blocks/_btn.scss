@@ -1,0 +1,80 @@
+@use '../base/base-lib.scss' as *;
+@use '../base/placeholds.scss';
+
+.btn {
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  background-color: $accent;
+  border-radius: 50px;
+
+  color: $white;
+  font: {
+    size: 20px;
+    weight: 700;
+  }
+
+  @extend %link;
+
+  &-light {
+    background-color: $white;
+    box-shadow: 1px 1px 2px rgba($primary, 25%);
+
+    color: $accent;
+  }
+
+  &-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    padding: 7px 0;
+  }
+
+  @include breakpoint($m-bp) {
+    font-size: 22px;
+    padding: 8px 20px;
+  }
+
+  @include breakpoint($lg-bp) {
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    &:hover {
+      box-shadow: 0px 3px 6px rgba($accent, 40%);
+      transform: translateY(-5px);
+    }
+
+    &-light {
+      &:hover {
+        box-shadow: 2px 2px 4px rgba($primary, 25%);
+      }
+    }
+
+    &-sm {
+      font-size: 17px;
+      padding: 7px 20px;
+    }
+  }
+
+  @include breakpoint($lg-bp) {
+    font-size: 20px;
+  }
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 6px;
+  }
+
+  @include breakpoint($m-bp) {
+    img {
+      margin-right: 10px;
+    }
+  }
+}
